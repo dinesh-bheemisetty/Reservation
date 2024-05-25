@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cancel a Reservation</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: rgb(208, 107, 107);
+        font-size: 150%;
+    }
+</style>
+<body>
+    <h2>Cancel a Reservation</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

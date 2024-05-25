@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make a Reservation</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: rgb(107, 208, 132);
+        font-size: 100%;
+    }
+</style>
+<body>
+    <h2 style="background-color: aquamarine;">Make a Reservation</h2>
+    <form method="post", style="text-align: center;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'home' %}">Back to Home</a>
+    
+</body>
+</html>
+
+
